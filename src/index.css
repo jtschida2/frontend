@@ -1,13 +1,157 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1f1f1;
+  margin: 20;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+img{
+  width: 100px;
+  height: 100px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wrapper{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.linkFormat{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+header{
+  background: #fff;
+  margin: 0;
+  text-decoration: none;
+}
+
+h1 {
+  color: #0048b7; /* Royal Blue */
+  font-size: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+h2 {
+  color: #0048b7; /* Royal Blue */
+}
+
+p {
+  color: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+li strong {
+  font-weight: bold;
+}
+
+.count {
+  color: #ffc20e; /* Yellow */
+  font-weight: bold;
+}
+
+.login {
+  margin-top:10px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFD700; /* Yellow color */
+  color: #000; /* Black text */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login:hover {
+  background-color: #FFC107; /* Darker yellow on hover */
+}
+
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.backpack-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 40px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  width: 1000px;
+}
+.backpack-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: rgb(23, 174, 96)
+}
+.backpack-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.backpack-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+/* new workout form */
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: rgb(23, 174, 96);
+  border: 0;
+  color: #fefefe;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+input.error{
+  border: 1px solid red;
 }
