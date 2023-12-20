@@ -18,6 +18,22 @@ export const gearReducer = (state, action) => {
             return{
                 gears: state.gears.filter((g) => g._id !== action.payload._id)
             }
+        
+            case 'UPDATE_GEAR':
+                return {
+                    ...state,
+                    gears: state.gears.map((gear) => {
+                        if (gear._id === action.payload._id) {
+                            return {
+                                ...gear,
+                                // Update only the specific fields that have changed
+                                gear_name: action.payload.gear_name,
+                                gear_brand: action.payload.gear_brand,
+                            };
+                        }
+                        return gear;
+                    }),
+                };
         default:
             return state
     }
