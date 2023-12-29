@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import { useEffect } from 'react'
 import { useGearContext } from '../hooks/useGearContext'
 
-const gearPage = () =>{
+const GearPage = () =>{
     const {gears, dispatch} = useGearContext()
     
     useEffect(() =>{
@@ -36,4 +36,4 @@ const gearPage = () =>{
     )
 }
 
-export default gearPage;
+export default GearPage;

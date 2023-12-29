@@ -1,10 +1,10 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 
 import TripDetails from '../components/TripDetails'
 
 import Navbar from '../components/Navbar'
 
-const tripPage = () =>{
+const TripPage = () =>{
     const[trips, setTrips] = useState(null)
 
     useEffect(() =>{
@@ -35,4 +35,4 @@ const tripPage = () =>{
     )
 }
 
-export default tripPage
+export default TripPage

@@ -4,7 +4,7 @@ import BackpackDetails from '../components/BackpackDetails'
 import Navbar from '../components/Navbar'
 import BackpackForm from '../components/BackpackForm'
 
-const backpackPage = () =>{
+const BackpackPage = () =>{
     const[backpacks, setBackpacks] = useState(null)
 
     useEffect(() =>{
@@ -36,4 +36,4 @@ const backpackPage = () =>{
     )
 }
 
-export default backpackPage
+export default BackpackPage

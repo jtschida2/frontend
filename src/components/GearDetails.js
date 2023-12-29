@@ -10,13 +10,32 @@ const GearDetails = ({ gear }) => {
     });
 
     const handleClick = async () => {
-        const response = await fetch('/catalog/gears/' + gear._id, {
-            method: 'DELETE'
-        })
-        const json = await response.json()
+        // Check references before deletion
+        try {
+            const response = await fetch(`/catalog/gears/${gear._id}/checkReferences`);
+            const json = await response.json();
 
-        if(response.ok){
-            dispatch({type: 'DELETE_GEAR', payload: json})
+            if (response.ok) {
+                if (json.referenced) {
+                    // Handle case where references exist
+                    alert('There are gear instances referencing this item. Deletion is not allowed.');
+                } else {
+                    // No references found, proceed with deletion
+                    const deleteResponse = await fetch(`/catalog/gears/${gear._id}`, {
+                        method: 'DELETE'
+                    });
+                    const deleteJson = await deleteResponse.json();
+
+                    if (deleteResponse.ok) {
+                        dispatch({ type: 'DELETE_GEAR', payload: deleteJson });
+                    }
+                }
+            } else {
+                // Handle unsuccessful response
+                console.error('Error checking references:', json.error);
+            }
+        } catch (error) {
+            console.error('Error checking references:', error);
         }
     }
 

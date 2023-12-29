@@ -4,7 +4,7 @@ import GearForm from '../components/GearForm'
 import GearInstanceDetails from '../components/GearInstanceDetails'
 import Navbar from '../components/Navbar'
 
-const gearInstancePage = () =>{
+const GearInstancePage = () =>{
     const[gearInstances, setGearInstances] = useState(null)
     
     useEffect(() =>{
@@ -35,4 +35,4 @@ const gearInstancePage = () =>{
     )
 }
 
-export default gearInstancePage;
+export default GearInstancePage;

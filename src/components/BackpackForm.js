@@ -117,6 +117,7 @@ const BackpackForm = () => {
             <input type="date" id="dateBought" name="Gear Purchased"></input>
 
         </form>
+        
     );
 };
 
